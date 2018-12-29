@@ -1,0 +1,4 @@
+{% load wagtailadmin_tags %}
+
+{% auto_update_preview as auto_update %}
+<button class="button {% if icon %}icon icon-view{% endif %}" onclick="var w = window.open(this.dataset.url + '?is_draft=true', '_blank'); w.focus(); return false;" data-url="{{ page.url }}">{{ label }}</button>
